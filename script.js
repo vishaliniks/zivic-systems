@@ -13,13 +13,12 @@ const productDatabase = [
 
         category: "Semiconductors",
 
-        image:
-            "images/SKM200GB128D.png",
+        image: "SKM200GB128D.png",
 
         price: "₹14,850",
 
         datasheetURL:
-            "datasheets/SKM200GB128D.pdf",
+            "SKM200GB128D.PDF",
 
         specifications: {
 
@@ -40,12 +39,12 @@ const productDatabase = [
         category: "Semiconductors",
 
         image:
-            "images/SKM75GAL123D.png",
+            "SKM75GAL123D.png",
 
         price: "₹9,650",
 
         datasheetURL:
-            "datasheets/SKM75GAL123D.pdf",
+            "SKM75GAL123D.PDF",
 
         specifications: {
 
@@ -66,12 +65,12 @@ const productDatabase = [
         category: "Microcontrollers",
 
         image:
-            "images/F446RE.PNG",
+            "F446RE.PNG",
 
         price: "₹1,250",
 
         datasheetURL:
-            "datasheets/STM32.pdf",
+            "STM32.pdf",
 
         specifications: {
 
