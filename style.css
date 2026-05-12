@@ -1,0 +1,1178 @@
+:root{
+
+    --primary:#d71920;
+    --dark:#111827;
+    --dark2:#1f2937;
+    --border:#dcdcdc;
+    --text:#222;
+    --muted:#6b7280;
+    --bg:#f4f5f7;
+    --white:#ffffff;
+
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    font-family:'Inter',sans-serif;
+    background:var(--bg);
+    color:var(--text);
+
+}
+
+/* TOPBAR */
+
+.topbar{
+
+    background:#0f172a;
+    color:white;
+    padding:8px 30px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    font-size:13px;
+
+}
+
+.topbar-links{
+
+    display:flex;
+    gap:20px;
+
+}
+
+.topbar-links a{
+
+    text-decoration:none;
+    color:#cbd5e1;
+
+}
+
+/* HEADER */
+
+.header{
+
+    position:sticky;
+    top:0;
+
+    z-index:1000;
+
+    background:white;
+    border-bottom:1px solid var(--border);
+
+}
+
+.header-main{
+
+    display:grid;
+    grid-template-columns:250px 1fr 250px;
+
+    gap:20px;
+
+    align-items:center;
+
+    padding:15px 30px;
+
+}
+
+.logo{
+
+    font-size:30px;
+    font-weight:800;
+    color:var(--primary);
+
+}
+
+.logo span{
+
+    color:#111827;
+
+}
+
+.search-bar{
+
+    display:flex;
+
+}
+
+.search-bar input{
+
+    width:100%;
+    padding:14px;
+
+    border:2px solid var(--primary);
+
+    outline:none;
+
+}
+
+.search-bar button{
+
+    background:var(--primary);
+    color:white;
+
+    border:none;
+
+    padding:0 25px;
+
+    cursor:pointer;
+
+}
+
+.header-actions{
+
+    display:flex;
+    justify-content:flex-end;
+    gap:15px;
+
+}
+
+.header-actions button{
+
+    padding:12px 18px;
+
+    background:white;
+    border:1px solid var(--border);
+
+    cursor:pointer;
+
+    font-weight:600;
+
+}
+
+/* NAVBAR */
+
+.navbar{
+
+    background:#111827;
+    color:white;
+
+}
+
+.nav-container{
+
+    display:flex;
+    gap:35px;
+
+    padding:14px 30px;
+
+}
+
+.nav-item{
+
+    position:relative;
+    cursor:pointer;
+
+    font-size:14px;
+
+}
+
+/* MEGA MENU */
+
+.mega-menu{
+
+    position:absolute;
+
+    top:50px;
+    left:0;
+
+    width:1000px;
+
+    background:white;
+
+    display:none;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:40px;
+
+    padding:30px;
+
+    border:1px solid var(--border);
+
+    box-shadow:0 10px 30px rgba(0,0,0,0.1);
+
+}
+
+.nav-item:hover .mega-menu{
+
+    display:grid;
+
+}
+
+.mega-column h4{
+
+    margin-bottom:15px;
+    color:var(--primary);
+
+}
+
+.mega-column a{
+
+    display:block;
+
+    margin-bottom:10px;
+
+    text-decoration:none;
+    color:#333;
+
+    font-size:14px;
+
+}
+
+/* LAYOUT */
+
+.layout{
+
+    display:grid;
+    grid-template-columns:300px 1fr;
+
+    gap:20px;
+
+    padding:20px 30px;
+
+}
+
+/* SIDEBAR */
+
+.sidebar{
+
+    background:white;
+
+    border:1px solid var(--border);
+
+    padding:20px;
+
+    height:max-content;
+
+}
+
+.sidebar h3{
+
+    margin-bottom:20px;
+
+}
+
+.filter-group{
+
+    border-bottom:1px solid var(--border);
+
+    padding-bottom:20px;
+    margin-bottom:20px;
+
+}
+
+.filter-group h4{
+
+    margin-bottom:15px;
+
+    font-size:15px;
+
+}
+
+.filter-group label{
+
+    display:block;
+
+    margin-bottom:10px;
+
+    font-size:14px;
+
+}
+
+/* CONTENT */
+
+.content{
+
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+
+}
+
+/* TOOLBAR */
+
+.toolbar{
+
+    background:white;
+
+    border:1px solid var(--border);
+
+    padding:15px 20px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+}
+
+.view-buttons{
+
+    display:flex;
+    gap:10px;
+
+}
+
+.view-buttons button{
+
+    padding:10px 16px;
+
+    border:1px solid var(--border);
+
+    background:white;
+
+    cursor:pointer;
+
+}
+
+/* PRODUCT GRID */
+
+.products.grid-view{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fill,minmax(250px,1fr));
+
+    gap:20px;
+
+}
+
+.product-card{
+
+    background:white;
+
+    border:1px solid var(--border);
+
+    padding:20px;
+
+    transition:0.3s;
+
+}
+
+.product-card:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 8px 25px rgba(0,0,0,0.08);
+
+}
+
+.product-card img{
+
+    width:100%;
+    height:180px;
+
+    object-fit:contain;
+
+    margin-bottom:20px;
+
+}
+
+.part-number{
+
+    color:var(--primary);
+
+    font-size:13px;
+    font-weight:700;
+
+    margin-bottom:10px;
+
+}
+
+.product-title{
+
+    font-size:15px;
+    font-weight:600;
+
+    margin-bottom:12px;
+
+    line-height:1.5;
+
+}
+
+.product-meta{
+
+    font-size:13px;
+
+    color:var(--muted);
+
+    margin-bottom:10px;
+
+}
+
+.price{
+
+    font-size:22px;
+    font-weight:800;
+
+    margin-bottom:15px;
+
+}
+
+.product-card button{
+
+    width:100%;
+
+    padding:12px;
+
+    background:var(--primary);
+    color:white;
+
+    border:none;
+
+    cursor:pointer;
+
+    font-weight:700;
+
+}
+
+/* LIST VIEW */
+
+.products.list-view{
+
+    display:flex;
+    flex-direction:column;
+
+    gap:15px;
+
+}
+
+.products.list-view .product-card{
+
+    display:grid;
+
+    grid-template-columns:180px 1fr 180px;
+
+    gap:20px;
+
+    align-items:center;
+
+}
+
+.products.list-view .product-card img{
+
+    height:120px;
+
+}
+
+/* FOOTER */
+
+footer{
+
+    margin-top:40px;
+
+    background:#111827;
+
+    color:white;
+
+    padding:40px 30px;
+
+}
+
+footer p{
+
+    color:#cbd5e1;
+
+    line-height:1.8;
+
+}
+/* =========================================
+   PRODUCT ACTIONS
+========================================= */
+
+.product-actions{
+
+    display:flex;
+    gap:10px;
+
+}
+
+.quick-download{
+
+    width:55px !important;
+
+    font-size:18px;
+
+}
+
+/* =========================================
+   PDF MODAL
+========================================= */
+
+.pdf-modal{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    background:rgba(0,0,0,0.8);
+
+    display:none;
+
+    justify-content:center;
+    align-items:center;
+
+    z-index:9999;
+
+}
+
+.pdf-content{
+
+    width:85%;
+    height:90%;
+
+    background:white;
+
+    position:relative;
+
+    border-radius:10px;
+
+    overflow:hidden;
+
+}
+
+.pdf-content iframe{
+
+    width:100%;
+    height:100%;
+
+    border:none;
+
+}
+
+#closeModal{
+
+    position:absolute;
+
+    top:15px;
+    right:20px;
+
+    font-size:35px;
+
+    cursor:pointer;
+
+    z-index:10000;
+
+    color:red;
+
+    font-weight:bold;
+
+}
+
+/* =========================================
+   ADVANCED FOOTER
+========================================= */
+
+footer{
+
+    margin-top:40px;
+
+    background:#111827;
+
+    padding:60px 30px;
+
+}
+
+.footer-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(auto-fit,minmax(220px,1fr));
+
+    gap:40px;
+
+}
+
+.footer-column h3{
+
+    margin-bottom:20px;
+
+    color:white;
+
+}
+
+.footer-column a{
+
+    display:block;
+
+    margin-bottom:12px;
+
+    color:#cbd5e1;
+
+    text-decoration:none;
+
+    font-size:14px;
+
+}
+
+.footer-column p{
+
+    color:#cbd5e1;
+
+    line-height:1.8;
+
+    font-size:14px;
+
+}
+
+
+
+:root{
+
+    --navy:#003366;
+    --slate:#64748b;
+    --white:#ffffff;
+
+}
+
+/* =========================================
+   SUB NAVIGATION
+========================================= */
+
+.profile-subnav{
+
+    position:sticky;
+
+    top:120px;
+
+    z-index:900;
+
+    display:flex;
+    justify-content:center;
+    gap:40px;
+
+    background:var(--white);
+
+    padding:15px;
+
+    border-bottom:1px solid #ddd;
+
+}
+
+.profile-subnav a{
+
+    text-decoration:none;
+
+    color:var(--navy);
+
+    font-weight:600;
+
+    font-size:14px;
+
+}
+
+/* =========================================
+   COMPANY PROFILE
+========================================= */
+
+.company-profile,
+.history-section,
+.leadership-section,
+.awards-section,
+.quality-section{
+
+    padding:80px 30px;
+
+    background:#f8fafc;
+
+}
+
+.section-heading{
+
+    text-align:center;
+
+    margin-bottom:50px;
+
+}
+
+.section-heading h2{
+
+    font-size:38px;
+
+    color:var(--navy);
+
+    margin-bottom:15px;
+
+}
+
+.section-heading p{
+
+    color:var(--slate);
+
+    max-width:850px;
+
+    margin:auto;
+
+    line-height:1.8;
+
+}
+
+/* =========================================
+   FEATURE GRID
+========================================= */
+
+.feature-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(auto-fit,minmax(280px,1fr));
+
+    gap:30px;
+
+}
+
+.feature-card{
+
+    background:white;
+
+    padding:40px;
+
+    border-radius:10px;
+
+    border:1px solid #ddd;
+
+    transition:0.3s;
+
+}
+
+.feature-card:hover{
+
+    transform:translateY(-5px);
+
+}
+
+.feature-icon{
+
+    font-size:45px;
+
+    margin-bottom:20px;
+
+}
+
+.feature-card h3{
+
+    margin-bottom:15px;
+
+    color:var(--navy);
+
+}
+
+/* =========================================
+   HISTORY
+========================================= */
+
+.history-card{
+
+    max-width:900px;
+
+    margin:auto;
+
+    background:white;
+
+    padding:40px;
+
+    border-radius:10px;
+
+    line-height:2;
+
+    border:1px solid #ddd;
+
+}
+
+/* =========================================
+   LEADERSHIP
+========================================= */
+
+.leadership-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(auto-fit,minmax(250px,1fr));
+
+    gap:30px;
+
+}
+
+.leader-card{
+
+    background:white;
+
+    padding:30px;
+
+    text-align:center;
+
+    border-radius:12px;
+
+    border:1px solid #ddd;
+
+    cursor:pointer;
+
+    transition:0.3s;
+
+}
+
+.leader-card:hover{
+
+    transform:translateY(-6px);
+
+}
+
+.leader-card img{
+
+    width:120px;
+    height:120px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    margin-bottom:20px;
+
+}
+
+.leader-card h3{
+
+    color:var(--navy);
+
+    margin-bottom:8px;
+
+}
+
+.leader-card span{
+
+    color:var(--slate);
+
+}
+
+/* =========================================
+   LEADER MODAL
+========================================= */
+
+.leader-modal{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    background:rgba(0,0,0,0.7);
+
+    display:none;
+
+    justify-content:center;
+    align-items:center;
+
+    z-index:9999;
+
+}
+
+.leader-modal-content{
+
+    background:white;
+
+    width:500px;
+
+    padding:40px;
+
+    border-radius:10px;
+
+    position:relative;
+
+}
+
+#closeLeaderModal{
+
+    position:absolute;
+
+    top:15px;
+    right:20px;
+
+    font-size:32px;
+
+    cursor:pointer;
+
+}
+
+/* =========================================
+   AWARDS
+========================================= */
+
+.awards-carousel{
+
+    display:flex;
+
+    gap:25px;
+
+    overflow-x:auto;
+
+    padding-bottom:10px;
+
+}
+
+.award-card{
+
+    min-width:300px;
+
+    background:white;
+
+    padding:35px;
+
+    border-radius:10px;
+
+    border:1px solid #ddd;
+
+}
+
+.award-icon{
+
+    font-size:40px;
+
+    margin-bottom:20px;
+
+}
+
+/* =========================================
+   QUALITY
+========================================= */
+
+.quality-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(auto-fit,minmax(220px,1fr));
+
+    gap:25px;
+
+}
+
+.quality-card{
+
+    background:white;
+
+    padding:35px;
+
+    border-radius:10px;
+
+    border:1px solid #ddd;
+
+    text-align:center;
+
+    font-weight:700;
+
+    color:var(--navy);
+
+}
+/* =========================================
+   COMPANY NAME TOP LEFT
+========================================= */
+
+
+
+.company-name{
+
+    font-size:20px;
+
+    font-weight:800;
+
+    color:#6a080b;
+
+    letter-spacing:1px;
+
+
+}
+
+/* =========================================
+   DIRECTORS GRID
+========================================= */
+
+.directors-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(auto-fit,minmax(320px,1fr));
+
+    gap:30px;
+
+}
+
+/* =========================================
+   DIRECTOR CARD
+========================================= */
+
+.director-card{
+
+    background:white;
+
+    border:1px solid #dbe2ea;
+
+    border-radius:12px;
+
+    padding:30px;
+
+    cursor:pointer;
+
+    transition:0.3s;
+
+    box-shadow:
+        0 2px 10px rgba(0,0,0,0.05);
+
+}
+
+.director-card:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:
+        0 10px 25px rgba(0,0,0,0.08);
+
+}
+
+.director-top{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:20px;
+
+}
+
+/* =========================================
+   INITIAL ICON
+========================================= */
+
+.director-initial{
+
+    width:70px;
+    height:70px;
+
+    border-radius:12px;
+
+    background:#003366;
+
+    color:white;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-size:24px;
+
+    font-weight:800;
+
+}
+
+/* =========================================
+   TEXT
+========================================= */
+
+.director-card h3{
+
+    font-size:18px;
+
+    color:#003366;
+
+    margin-bottom:8px;
+
+    line-height:1.5;
+
+}
+
+.director-card span{
+
+    color:#64748b;
+
+    font-size:14px;
+
+    font-weight:600;
+
+}
+
+.director-line{
+
+    width:100%;
+
+    height:1px;
+
+    background:#e5e7eb;
+
+    margin:25px 0;
+
+}
+
+.director-card p{
+
+    color:#475569;
+
+    line-height:1.8;
+
+    font-size:15px;
+
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media(max-width:768px){
+
+    .company-name{
+
+        font-size:22px;
+
+    }
+
+}
+
+/* RESPONSIVE */
+
+@media(max-width:1100px){
+
+    .layout{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .sidebar{
+
+        display:none;
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .header-main{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .products.list-view .product-card{
+
+        grid-template-columns:1fr;
+
+    }
+
+}

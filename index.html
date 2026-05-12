@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Zivic Systems | Industrial Electronics</title>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- TOPBAR -->
+
+    <div class="topbar">
+
+        <div>
+            Industrial Electronics Marketplace
+        </div>
+
+        <div class="topbar-links">
+            <a href="#">Track Order</a>
+            <a href="#">Support</a>
+            <a href="#">Datasheets</a>
+        </div>
+
+    </div>
+
+    <!-- HEADER -->
+
+    <header class="header">
+
+        <div class="header-main">
+
+            <div class="logo">
+
+    <img src="images/logo.png" alt="Zivic Systems private limited" />
+
+</div>
+
+            <div class="search-bar">
+
+                <input
+    type="text"
+    id="searchInput"
+    placeholder="Search SKU, category, manufacturer..."
+/>
+
+                <button>
+                    Search
+                </button>
+
+            </div>
+
+            <div class="header-actions">
+
+                <button>
+                    Login
+                </button>
+
+                <button>
+                    Cart (0)
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- NAVBAR -->
+<!-- PROFILE SUB NAV -->
+
+<div class="profile-subnav">
+
+    <a href="#history">
+        History
+    </a>
+
+    <a href="#leadership">
+        Leadership
+    </a>
+
+    <a href="#awards">
+        Awards
+    </a>
+
+    <a href="#quality">
+        Quality
+    </a>
+
+</div>
+        <nav class="navbar">
+
+            <div class="nav-container">
+              <div class="nav-item">
+
+    Company
+
+    <div class="mega-menu company-dropdown">
+
+        <div class="mega-column">
+
+            <h4>Corporate</h4>
+
+            <a href="#companyProfile">
+                Corporate Profile
+            </a>
+
+            <a href="#leadership">
+                Leadership
+            </a>
+
+            <a href="#awards">
+                Awards
+            </a>
+
+            <a href="#quality">
+                Quality Standards
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+                <div class="nav-item">
+
+                    Semiconductors
+
+                    <!-- MEGA MENU -->
+
+                    <div class="mega-menu">
+
+                        <div class="mega-column">
+
+                            <h4>IGBT Modules</h4>
+
+                            <a href="#">SKM Series</a>
+                            <a href="#">SEMITRANS</a>
+                            <a href="#">Power Modules</a>
+
+                        </div>
+
+                        <div class="mega-column">
+
+                            <h4>MOSFET</h4>
+
+                            <a href="#">High Voltage</a>
+                            <a href="#">Low RDS</a>
+                            <a href="#">Automotive</a>
+
+                        </div>
+
+                        <div class="mega-column">
+
+                            <h4>Microcontrollers</h4>
+
+                            <a href="#">STM32</a>
+                            <a href="#">ESP32</a>
+                            <a href="#">PIC</a>
+
+                        </div>
+
+                        <div class="mega-column">
+
+                            <h4>Sensors</h4>
+
+                            <a href="#">Voltage</a>
+                            <a href="#">Current</a>
+                            <a href="#">Temperature</a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="nav-item">
+                    Power Electronics
+                </div>
+
+                <div class="nav-item">
+                    Embedded Systems
+                </div>
+
+                <div class="nav-item">
+                    Automation
+                </div>
+
+                <div class="nav-item">
+                    Datasheets
+                </div>
+
+            </div>
+
+        </nav>
+    
+    </header>
+
+    <!-- MAIN LAYOUT -->
+
+    <div class="layout">
+
+        <!-- SIDEBAR -->
+
+        <aside class="sidebar">
+
+            <h3>Filter Products</h3>
+
+            <div class="filter-group">
+
+                <h4>Manufacturer</h4>
+
+                <label><input type="checkbox"> Semikron</label>
+                <label><input type="checkbox"> Infineon</label>
+                <label><input type="checkbox"> STMicroelectronics</label>
+
+            </div>
+
+            <div class="filter-group">
+
+                <h4>Voltage Rating</h4>
+
+                <label><input type="checkbox"> 600V</label>
+                <label><input type="checkbox"> 1200V</label>
+                <label><input type="checkbox"> 1700V</label>
+
+            </div>
+
+            <div class="filter-group">
+
+                <h4>Applications</h4>
+
+                <label><input type="checkbox"> Inverter</label>
+                <label><input type="checkbox"> Motor Drive</label>
+                <label><input type="checkbox"> Power Supply</label>
+
+            </div>
+
+            <div class="filter-group">
+
+                <h4>Availability</h4>
+
+                <label><input type="checkbox"> In Stock</label>
+                <label><input type="checkbox"> Pre Order</label>
+
+            </div>
+
+        </aside>
+
+        <!-- MAIN CONTENT -->
+
+        <main class="content">
+
+            <!-- TOOLBAR -->
+
+            <div class="toolbar">
+
+                <div id="productCount">
+    Showing 0 Components
+</div>
+
+                <div class="view-buttons">
+
+                    <button id="gridBtn">
+                        Grid View
+                    </button>
+
+                    <button id="listBtn">
+                        List View
+                    </button>
+
+                </div>
+
+            </div>
+
+            <!-- PRODUCTS -->
+
+            <div class="products grid-view" id="products">
+
+                <!-- PRODUCT CARD -->
+<div class="nav-item company-menu">
+
+    Company
+
+    <div class="mega-menu company-dropdown">
+
+        <div class="mega-column">
+
+            <h4>Corporate</h4>
+
+            <a href="#companyProfile">
+                Corporate Profile
+            </a>
+
+            <a href="#leadership">
+                Leadership
+            </a>
+
+            <a href="#awards">
+                Awards
+            </a>
+
+            <a href="#quality">
+                Quality Standards
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+                <div class="product-card">
+
+                    <img
+                        src="images\SKM200GB128D.png"
+                        alt="IGBT"
+                    />
+
+                    <div class="part-number">
+                        SKM200GB128D
+                    </div>
+
+                    <div class="product-title">
+                        Semikron IGBT Power Module 1200V
+                    </div>
+
+                    <div class="product-meta">
+                        Voltage: 1200V | Current: 200A
+                    </div>
+
+                    <div class="price">
+                        ₹14,850
+                    </div>
+
+                    <button>
+                        View Datasheet
+                    </button>
+
+                </div>
+
+                <!-- PRODUCT CARD -->
+
+                <div class="product-card">
+
+                    <img
+                        src="images/SKM75GAL123D.png"
+                        alt="IGBT"
+                    />
+
+                    <div class="part-number">
+                        SKM75GAL123D
+                    </div>
+
+                    <div class="product-title">
+                        Semitrans Industrial IGBT Module
+                    </div>
+
+                    <div class="product-meta">
+                        Voltage: 1200V | Current: 75A
+                    </div>
+
+                    <div class="price">
+                        ₹9,650
+                    </div>
+
+                    <button>
+                        View Datasheet
+                    </button>
+
+                </div>
+
+                <!-- PRODUCT CARD -->
+
+                <div class="product-card">
+
+                    <img
+                        src="images/F446RE.PNG"
+                        alt="MCU"
+                    />
+
+                    <div class="part-number">
+                        STM32F446RE
+                    </div>
+
+                    <div class="product-title">
+                        STM32 ARM Cortex Development Board
+                    </div>
+
+                    <div class="product-meta">
+                        ARM Cortex-M4 | 180MHz
+                    </div>
+
+                    <div class="price">
+                        ₹1,250
+                    </div>
+
+                    <button>
+                        Add To Cart
+                    </button>
+
+                </div>
+
+            </div>
+
+        </main>
+
+    </div>
+    <!-- DATASHEET MODAL -->
+
+<div class="pdf-modal" id="datasheetModal">
+
+    <div class="pdf-content">
+
+        <span id="closeModal">
+            &times;
+        </span>
+
+        <iframe
+            id="pdfViewer"
+            src=""
+        ></iframe>
+
+    </div>
+
+</div>
+<!-- COMPANY PROFILE -->
+
+<section class="company-profile" id="companyProfile">
+
+    <div class="section-heading">
+
+        <h2>
+            About Our Products
+        </h2>
+
+        <p>
+            Industrial-grade embedded electronics,
+            intelligent power systems, and
+            enterprise-scale distribution solutions.
+        </p>
+
+    </div>
+
+    <!-- FEATURE GRID -->
+
+    <div class="feature-grid">
+
+        <div class="feature-card">
+
+            <div class="feature-icon">
+                🏭
+            </div>
+
+            <h3>
+                Manufacturing Scale
+            </h3>
+
+            <p>
+                Advanced industrial manufacturing support
+                for embedded systems and power electronics.
+            </p>
+
+        </div>
+
+        <div class="feature-card">
+
+            <div class="feature-icon">
+                📦
+            </div>
+
+            <h3>
+                Inventory Depth
+            </h3>
+
+            <p>
+                High-volume stock availability for
+                semiconductors, controllers,
+                and industrial modules.
+            </p>
+
+        </div>
+
+        <div class="feature-card">
+
+            <div class="feature-icon">
+                🌎
+            </div>
+
+            <h3>
+                Global Distribution
+            </h3>
+
+            <p>
+                Enterprise distribution network
+                supporting industrial customers
+                and automation integrators.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- COMPANY HISTORY -->
+
+<section class="history-section" id="history">
+
+    <div class="section-heading">
+
+        <h2>
+            Company History
+        </h2>
+
+    </div>
+
+    <div class="history-card">
+
+        <p>
+            Zivic Systems Private Limited was founded
+            with a vision to develop intelligent
+            industrial electronics solutions focused on
+            smart energy monitoring, embedded systems,
+            and industrial automation technologies.
+        </p>
+
+    </div>
+
+</section>
+
+<!-- LEADERSHIP -->
+
+<section class="leadership-section" id="leadership">
+
+    <div class="section-heading">
+
+        <h2>
+            Board of Directors
+        </h2>
+
+        <p>
+            Executive leadership driving innovation,
+            industrial automation, and intelligent
+            energy monitoring solutions.
+        </p>
+
+    </div>
+
+    <div class="directors-grid">
+
+        <!-- DIRECTOR -->
+
+        <div class="director-card"
+            data-name="SUKANTH VENKATESAN"
+            data-title="Director"
+            data-bio="Director focused on industrial embedded systems, semiconductor solutions, and enterprise technology operations."
+        >
+
+            <div class="director-top">
+
+                <div class="director-initial">
+                    SV
+                </div>
+
+                <div>
+
+                    <h3>
+                        SUKANTH VENKATESAN
+                    </h3>
+
+                    <span>
+                        Director & CEO
+                    </span>
+
+                </div>
+
+            </div>
+
+            <div class="director-line"></div>
+
+            <p>
+                Industrial Electronics &
+                Embedded Systems
+            </p>
+
+        </div>
+
+        <!-- DIRECTOR -->
+
+        <div class="director-card"
+            data-name="VISHALINI SIVANANTHAM"
+            data-title="Director & CEO"
+            data-bio="Leading enterprise growth, intelligent electricity monitoring systems, and industrial innovation strategy."
+        >
+
+            <div class="director-top">
+
+                <div class="director-initial">
+                    VS
+                </div>
+
+                <div>
+
+                    <h3>
+                        VISHALINI SIVANANTHAM
+                    </h3>
+
+                    <span>
+                        Director 
+                    </span>
+
+                </div>
+
+            </div>
+
+            <div class="director-line"></div>
+
+            <p>
+                Smart Energy Systems &
+                Enterprise Innovation
+            </p>
+
+        </div>
+
+        <!-- DIRECTOR -->
+
+        <div class="director-card"
+            data-name="SUBRAMANI KUNJAMPALAYAM SUJAIKUMAR"
+            data-title="Director"
+            data-bio="Focused on operational strategy, industrial product management, and technical business development."
+        >
+
+            <div class="director-top">
+
+                <div class="director-initial">
+                    SS
+                </div>
+
+                <div>
+
+                    <h3>
+                        SUBRAMANI KUNJAMPALAYAM SUJAIKUMAR
+                    </h3>
+
+                    <span>
+                        Director
+                    </span>
+
+                </div>
+
+            </div>
+
+            <div class="director-line"></div>
+
+            <p>
+                Operations &
+                Product Development
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- LEADER MODAL -->
+
+<div class="leader-modal" id="leaderModal">
+
+    <div class="leader-modal-content">
+
+        <span id="closeLeaderModal">
+            &times;
+        </span>
+
+        <h2 id="leaderName"></h2>
+
+        <h4 id="leaderTitle"></h4>
+
+        <p id="leaderBio"></p>
+
+    </div>
+
+</div>
+
+<!-- AWARDS -->
+
+<section class="awards-section" id="awards">
+
+    <div class="section-heading">
+
+        <h2>
+            Awards & Certifications
+        </h2>
+
+    </div>
+
+    <div class="awards-carousel">
+
+        <div class="award-card">
+
+            <div class="award-icon">
+                🏆
+            </div>
+
+            <h3>
+                ISO Certified
+            </h3>
+
+            <p>
+                Verified quality standards
+                for industrial electronics systems.
+            </p>
+
+        </div>
+
+        <div class="award-card">
+
+            <div class="award-icon">
+                ✅
+            </div>
+
+            <h3>
+                RoHS Compliance
+            </h3>
+
+            <p>
+                Environmental compliance
+                for electronic manufacturing.
+            </p>
+
+        </div>
+
+        <div class="award-card">
+
+            <div class="award-icon">
+                🌟
+            </div>
+
+            <h3>
+                Distributor Excellence
+            </h3>
+
+            <p>
+                Recognized for industrial
+                component distribution support.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- QUALITY -->
+
+<section class="quality-section" id="quality">
+
+    <div class="section-heading">
+
+        <h2>
+            Quality Standards
+        </h2>
+
+    </div>
+
+    <div class="quality-grid">
+
+        <div class="quality-card">
+            ISO 9001
+        </div>
+
+        <div class="quality-card">
+            RoHS Certified
+        </div>
+
+        <div class="quality-card">
+            REACH Compliance
+        </div>
+
+    </div>
+
+</section>
+    <footer>
+
+    <div class="footer-grid">
+
+        <!-- ABOUT -->
+
+        <div class="footer-column">
+
+            <h3>About Us</h3>
+
+            <p>
+                Zivic Systems Private Limited specializes
+                in industrial electronics, embedded systems,
+                power modules, and intelligent electricity
+                monitoring solutions.
+            </p>
+
+        </div>
+
+        <!-- CONTACT -->
+
+        <div class="footer-column">
+
+            <h3>Contact Details</h3>
+
+            <p>
+                68Q2, Thiruvalluvar Nagar,
+                Komarapalayam,
+                Tamil Nadu – 638183
+            </p>
+
+            <p>
+                info@zivicsystems.com
+            </p>
+
+            <p>
+                +91 84281 28588
+            </p>
+
+        </div>
+
+        <!-- COMPLIANCE -->
+
+        <div class="footer-column">
+
+            <h3>Compliance</h3>
+
+            <a href="#">
+                RoHS Compliance
+            </a>
+
+            <a href="#">
+                REACH Standards
+            </a>
+
+            <a href="#">
+                ISO Documentation
+            </a>
+
+        </div>
+
+        <!-- SOCIAL -->
+
+        <div class="footer-column">
+
+            <h3>Social Media</h3>
+
+            <a href="#">
+                LinkedIn
+            </a>
+
+            <a href="#">
+                Instagram
+            </a>
+
+            <a href="#">
+                Facebook
+            </a>
+
+        </div>
+
+    </div>
+
+</footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
