@@ -14,12 +14,12 @@ const productDatabase = [
         category: "Semiconductors",
 
         image:
-            "images/SKM200GB128D.png",
+            "SKM200GB128D.png",
 
         price: "₹14,850",
 
         datasheetURL:
-            "datasheets/SKM200GB128D.pdf",
+            "SKM200GB128D.PDF",
 
         specifications: {
 
@@ -40,12 +40,12 @@ const productDatabase = [
         category: "Semiconductors",
 
         image:
-            "images/SKM75GAL123D.png",
+            "SKM75GAL123D.png",
 
         price: "₹9,650",
 
         datasheetURL:
-            "datasheets/SKM75GAL123D.pdf",
+            "SKM75GAL123D.pdf",
 
         specifications: {
 
@@ -66,12 +66,12 @@ const productDatabase = [
         category: "Microcontrollers",
 
         image:
-            "images/F446RE.PNG",
+            "F446RE.PNG",
 
         price: "₹1,250",
 
         datasheetURL:
-            "datasheets/STM32.pdf",
+            "STM32.pdf",
 
         specifications: {
 
@@ -375,7 +375,7 @@ const productDatabase = [
 
     category: "Protection Devices",
 
-    image: "",
+    image: "63A Miniature Circuit Breaker.png",
 
     price: "₹650",
 
@@ -401,7 +401,7 @@ const productDatabase = [
 
     category: "Industrial Automation",
 
-    image: "",
+    image: "40A Industrial Contactor.png",
 
     price: "₹1,250",
 
@@ -427,7 +427,7 @@ const productDatabase = [
 
     category: "Power Supplies",
 
-    image: "",
+    image: "24V 10A Industrial SMPS.png",
 
     price: "₹2,400",
 
@@ -453,7 +453,7 @@ const productDatabase = [
 
     category: "Power Electronics",
 
-    image: "",
+    image: "TRANSFORMER-5KVA.png",
 
     price: "₹8,500",
 
@@ -479,7 +479,7 @@ const productDatabase = [
 
     category: "Protection Devices",
 
-    image: "",
+    image: "32A Ceramic Industrial Fuse.png",
 
     price: "₹120",
 
@@ -505,7 +505,7 @@ const productDatabase = [
 
     category: "Connectors",
 
-    image: "",
+    image: "0-Way Terminal Block.png",
 
     price: "₹85",
 
@@ -531,7 +531,7 @@ const productDatabase = [
 
     category: "Thermal Management",
 
-    image: "",
+    image: "fan.png",
 
     price: "₹320",
 
@@ -557,7 +557,7 @@ const productDatabase = [
 
     category: "Sensors",
 
-    image: "",
+    image: "ACS712 Current Sensor Module.png",
 
     price: "₹180",
 
@@ -583,7 +583,7 @@ const productDatabase = [
 
     category: "Embedded Systems",
 
-    image: "",
+    image: "ESP32 WiFi + Bluetooth Module.png",
 
     price: "₹350",
 
@@ -615,7 +615,7 @@ const productDatabase = [
 
     stock: "90 pcs",
 
-    datasheetURL: "",
+    datasheetURL: "20x4 Character LCD Display.png",
 
     specifications: {
 
