@@ -82,17 +82,86 @@ body{
 
 }
 
+/* =========================================
+   LOGO SECTION
+========================================= */
+
 .logo{
 
-    font-size:30px;
-    font-weight:800;
-    color:var(--primary);
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+    text-decoration:none;
 
 }
 
-.logo span{
+/* =========================================
+   SMALL LOGO IMAGE
+========================================= */
 
-    color:#111827;
+.company-logo{
+
+    width:65px;
+
+    height:65px;
+
+    object-fit:contain;
+
+}
+
+/* =========================================
+   COMPANY NAME
+========================================= */
+
+.company-name{
+
+    font-size:28px;
+
+    font-weight:800;
+
+    line-height:1.1;
+
+    color:#d90429;
+
+    text-transform:capitalize;
+
+}
+
+.company-name span{
+
+    display:block;
+
+    font-size:24px;
+
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media(max-width:768px){
+
+    .company-logo{
+
+        width:48px;
+        height:48px;
+
+    }
+
+    .company-name{
+
+        font-size:20px;
+
+    }
+
+    .company-name span{
+
+        font-size:18px;
+
+    }
 
 }
 
@@ -822,6 +891,17 @@ footer{
     cursor:pointer;
 
     transition:0.3s;
+
+}
+.stock{
+
+    color:#16a34a;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    margin-bottom:15px;
 
 }
 
