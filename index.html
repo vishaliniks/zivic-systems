@@ -40,11 +40,22 @@
 
         <div class="header-main">
 
-            <div class="logo">
+            <a href="index.html" class="logo">
 
-    <img src="lLogo.png" alt="Zivic Systems private limited" />
+    <img
+        src="logo.png"
+        alt="Zivic Systems Logo"
+        class="company-logo"
+    >
 
-</div>
+    <div class="company-name">
+
+        Zivic Systems
+        <span>private limited</span>
+
+    </div>
+
+</a>
 
             <div class="search-bar">
 
@@ -320,7 +331,7 @@
                 <div class="product-card">
 
                     <img
-                        src="SKM200GB128D.png"
+                        src="images\SKM200GB128D.png"
                         alt="IGBT"
                     />
 
@@ -339,6 +350,9 @@
                     <div class="price">
                         ₹14,850
                     </div>
+                    <div class="stock">
+    Stock: ${product.stock}
+</div>
 
                     <button>
                         View Datasheet
@@ -351,7 +365,7 @@
                 <div class="product-card">
 
                     <img
-                        src="SKM75GAL123D.png"
+                        src="images/SKM75GAL123D.png"
                         alt="IGBT"
                     />
 
@@ -370,6 +384,9 @@
                     <div class="price">
                         ₹9,650
                     </div>
+                    <div class="stock">
+    Stock: ${product.stock}
+</div>
 
                     <button>
                         View Datasheet
@@ -382,7 +399,7 @@
                 <div class="product-card">
 
                     <img
-                        src="F446RE.PNG"
+                        src="images/F446RE.PNG"
                         alt="MCU"
                     />
 
@@ -401,7 +418,9 @@
                     <div class="price">
                         ₹1,250
                     </div>
-
+                    <div class="stock">
+    Stock: ${product.stock}
+</div>
                     <button>
                         Add To Cart
                     </button>
