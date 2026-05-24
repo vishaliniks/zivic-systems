@@ -137,7 +137,77 @@ body{
     font-size:24px;
 
 }
+/* =========================================
+   HAMBURGER MENU ICON
+========================================= */
 
+.menu-icon-wrapper{
+
+    position:relative;
+
+}
+
+.menu-icon-btn{
+
+    width:60px;
+
+    height:60px;
+
+    border:none;
+
+    background:transparent;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:6px;
+
+    cursor:pointer;
+
+}
+
+/* =========================================
+   3 LINES
+========================================= */
+
+.menu-icon-btn span{
+
+    width:28px;
+
+    height:3px;
+
+    background:white;
+
+    border-radius:5px;
+
+    transition:0.3s;
+
+}
+
+/* =========================================
+   HOVER EFFECT
+========================================= */
+
+.menu-icon-btn:hover span{
+
+    background:#d90429;
+
+}
+
+/* =========================================
+   SHOW MEGA MENU
+========================================= */
+
+.menu-icon-wrapper:hover .mega-menu{
+
+    display:grid;
+
+}
 /* =========================================
    RESPONSIVE
 ========================================= */
