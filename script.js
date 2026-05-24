@@ -278,7 +278,7 @@ const productDatabase = [
 
     stock: "3000 pcs",
 
-    datasheetURL: "capacitor.pdf",
+    datasheetURL: "",
 
     specifications: {
 
@@ -304,7 +304,7 @@ const productDatabase = [
 
     stock: "1200 pcs",
 
-    datasheetURL: "inductor.pdf",
+    datasheetURL: "",
 
     specifications: {
 
@@ -597,6 +597,485 @@ const productDatabase = [
         connectivity: "WiFi + Bluetooth",
         voltage: "3.3V",
         application: "IoT Development"
+
+    }
+
+},
+{
+    sku: "BC547",
+
+    title: "NPN General Purpose Transistor",
+
+    category: "Transistors",
+
+    image: "",
+
+    price: "₹12",
+
+    datasheetURL: "",
+
+    specifications: {
+
+        type: "NPN",
+        voltage: "45V",
+        current: "100mA",
+        application: "Switching"
+
+    }
+
+},
+
+{
+    sku: "IRFZ44N",
+
+    title: "Power MOSFET Transistor",
+
+    category: "MOSFET",
+
+    image: "",
+
+    price: "₹65",
+
+    datasheetURL: "",
+
+    specifications: {
+
+        voltage: "55V",
+        current: "49A",
+        package: "TO-220",
+        application: "Motor Driver"
+
+    }
+
+},
+
+{
+    sku: "2N2222",
+
+    title: "High Speed NPN Transistor",
+
+    category: "Transistors",
+
+    image: "",
+
+    price: "₹15",
+
+    datasheetURL: "",
+
+    specifications: {
+
+        voltage: "40V",
+        current: "800mA",
+        package: "TO-92",
+        application: "Amplifier"
+
+    }
+
+},
+
+{
+    sku: "ARDUINO-UNO",
+
+    title: "Arduino UNO R3 Development Board",
+
+    category: "Arduino",
+
+    image: "",
+
+    price: "₹550",
+
+    datasheetURL: "",
+
+    specifications: {
+
+        microcontroller: "ATmega328P",
+        voltage: "5V",
+        usb: "USB Type-B",
+        application: "IoT"
+
+    }
+
+},
+
+{
+    sku: "ARDUINO-NANO",
+
+    title: "Arduino Nano Board",
+
+    category: "Arduino",
+
+    image: "",
+
+    price: "₹350",
+
+    datasheetURL: "",
+
+    specifications: {
+
+        microcontroller: "ATmega328",
+        voltage: "5V",
+        pins: "22",
+        application: "Embedded"
+
+    }
+
+},
+
+{
+    sku: "ESP32-WROOM",
+
+    title: "ESP32 WiFi Bluetooth Module",
+
+    category: "Wireless",
+
+    image: "",
+
+    price: "₹320",
+
+    datasheetURL: "",
+
+    specifications: {
+
+        wifi: "2.4GHz",
+        bluetooth: "BLE 4.2",
+        core: "Dual Core",
+        application: "IoT"
+
+    }
+
+},
+
+{
+    sku: "NODEMCU-V3",
+
+    title: "NodeMCU ESP8266 Development Board",
+
+    category: "Wireless",
+
+    image: "",
+
+    price: "₹280",
+
+    datasheetURL: "",
+
+    specifications: {
+
+        wifi: "802.11 b/g/n",
+        usb: "Micro USB",
+        voltage: "3.3V",
+        application: "Smart Devices"
+
+    }
+
+},
+
+{
+    sku: "LM7805",
+
+    title: "5V Voltage Regulator IC",
+
+    category: "IC",
+
+    image: "",
+
+    price: "₹18",
+
+    datasheetURL: "",
+
+    specifications: {
+
+        output: "5V",
+        current: "1A",
+        package: "TO-220",
+        application: "Power Supply"
+
+    }
+
+},
+
+{
+    sku: "LM317",
+
+    title: "Adjustable Voltage Regulator",
+
+    category: "IC",
+
+    image: "",
+
+    price: "₹22",
+
+    datasheetURL: "",
+
+    specifications: {
+
+        voltage: "1.25V-37V",
+        current: "1.5A",
+        package: "TO-220",
+        application: "Variable Supply"
+
+    }
+
+},
+
+{
+    sku: "NE555",
+
+    title: "555 Timer IC",
+
+    category: "IC",
+
+    image: "",
+
+    price: "₹10",
+
+    datasheetURL: "",
+
+    specifications: {
+
+        package: "DIP-8",
+        voltage: "4.5V-16V",
+        frequency: "500kHz",
+        application: "Timer Circuits"
+
+    }
+
+},
+
+{
+    sku: "RELAY-12V",
+
+    title: "12V SPDT Relay",
+
+    category: "Relay",
+
+    image: "",
+
+    price: "₹45",
+
+    datasheetURL: "",
+
+    specifications: {
+
+        coil: "12V",
+        current: "10A",
+        contacts: "SPDT",
+        application: "Switching"
+
+    }
+
+},
+
+{
+    sku: "CAP-100UF",
+
+    title: "100uF Electrolytic Capacitor",
+
+    category: "Capacitors",
+
+    image: "",
+
+    price: "₹5",
+
+    datasheetURL: "",
+
+    specifications: {
+
+        capacitance: "100uF",
+        voltage: "25V",
+        type: "Electrolytic",
+        application: "Filtering"
+
+    }
+
+},
+
+{
+    sku: "CAP-470UF",
+
+    title: "470uF Capacitor",
+
+    category: "Capacitors",
+
+    image: "",
+
+    price: "₹8",
+
+    datasheetURL: "",
+
+    specifications: {
+
+        capacitance: "470uF",
+        voltage: "50V",
+        type: "Electrolytic",
+        application: "Power Supply"
+
+    }
+
+},
+
+{
+    sku: "RES-220OHM",
+
+    title: "220 Ohm Resistor",
+
+    category: "Resistors",
+
+    image: "",
+
+    price: "₹1",
+
+    datasheetURL: "",
+
+    specifications: {
+
+        resistance: "220Ω",
+        tolerance: "5%",
+        wattage: "0.25W",
+        application: "General Purpose"
+
+    }
+
+},
+
+{
+    sku: "RES-10K",
+
+    title: "10K Ohm Resistor",
+
+    category: "Resistors",
+
+    image: "",
+
+    price: "₹1",
+
+    datasheetURL: "",
+
+    specifications: {
+
+        resistance: "10KΩ",
+        tolerance: "5%",
+        wattage: "0.25W",
+        application: "Pull-up"
+
+    }
+
+},
+
+{
+    sku: "DHT11",
+
+    title: "Temperature Humidity Sensor",
+
+    category: "Sensors",
+
+    image: "",
+
+    price: "₹85",
+
+    datasheetURL: "",
+
+    specifications: {
+
+        voltage: "3.3V-5V",
+        humidity: "20-90%",
+        temperature: "0-50°C",
+        application: "Environment Monitoring"
+
+    }
+
+},
+
+{
+    sku: "HC-SR04",
+
+    title: "Ultrasonic Distance Sensor",
+
+    category: "Sensors",
+
+    image: "",
+
+    price: "₹95",
+
+    datasheetURL: "",
+
+    specifications: {
+
+        range: "2cm-400cm",
+        voltage: "5V",
+        accuracy: "3mm",
+        application: "Distance Measurement"
+
+    }
+
+},
+
+{
+    sku: "L298N",
+
+    title: "Dual H-Bridge Motor Driver",
+
+    category: "Motor Drivers",
+
+    image: "",
+
+    price: "₹140",
+
+    datasheetURL: "",
+
+    specifications: {
+
+        voltage: "5V-35V",
+        current: "2A",
+        channels: "2",
+        application: "DC Motors"
+
+    }
+
+},
+
+{
+    sku: "SG90",
+
+    title: "Servo Motor SG90",
+
+    category: "Motors",
+
+    image: "",
+
+    price: "₹120",
+
+    datasheetURL: "",
+
+    specifications: {
+
+        rotation: "180°",
+        voltage: "4.8V",
+        torque: "1.8kg/cm",
+        application: "Robotics"
+
+    }
+
+},
+
+{
+    sku: "LCD16X2",
+
+    title: "16x2 LCD Display Module",
+
+    category: "Displays",
+
+    image: "",
+
+    price: "₹150",
+
+    datasheetURL: "",
+
+    specifications: {
+
+        display: "16x2",
+        voltage: "5V",
+        interface: "Parallel",
+        application: "Embedded Display"
 
     }
 
