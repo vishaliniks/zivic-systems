@@ -969,13 +969,15 @@
     </div>
 
 </footer>
-
-    <script src="script.js"></script>
 <!-- =========================================
-     SHOPPING CART DRAWER
+     CART OVERLAY
 ========================================= -->
 
 <div class="cart-overlay" id="cartOverlay"></div>
+
+<!-- =========================================
+     SHOPPING CART DRAWER
+========================================= -->
 
 <div class="cart-drawer" id="cartDrawer">
 
@@ -1048,14 +1050,22 @@
 </div>
 
 <!-- =========================================
-     CHECKOUT PAGE
+     CHECKOUT SCREEN
 ========================================= -->
 
 <div class="checkout-screen" id="checkoutScreen">
 
     <div class="checkout-container">
 
-        <h2>Shipping Details</h2>
+        <div class="checkout-top">
+
+    <button id="backToCart">
+        ← Back
+    </button>
+
+    <h2>Shipping Details</h2>
+
+</div>
 
         <form id="checkoutForm">
 
@@ -1093,5 +1103,10 @@
     </div>
 
 </div>
+    <script src="script.js"></script>
+
+
+<!-- =========================================
+
 </body>
 </html>
