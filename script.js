@@ -628,24 +628,8 @@ const productDatabase = [
 
 }
 ];
-/* =========================================
-   GLOBAL CART STATE
-========================================= */
 
-let cart = [];
 
-/* =========================================
-   UPDATE CART COUNTER
-========================================= */
-
-function updateCartCounter(){
-
-    const cartCounter =
-        document.getElementById("cartCounter");
-
-    cartCounter.innerText = cart.length;
-
-}
 /* =========================================
    DIRECTOR MODAL
 ========================================= */
@@ -791,43 +775,6 @@ listBtn.addEventListener("click", () => {
     productsContainer.classList.add("list-view");
 
 });
-/* =========================================
-   ADD TO CART
-========================================= */
-
-document.addEventListener("click", function(e){
-
-    if(e.target.classList.contains("add-cart-btn")){
-
-        const sku =
-            e.target.dataset.sku;
-
-        const product =
-            productDatabase.find(
-                item => item.sku === sku
-            );
-
-        if(product){
-
-            cart.push(product);
-
-            updateCartCounter();
-
-            e.target.innerText =
-                "Added ✓";
-
-            setTimeout(() => {
-
-                e.target.innerText =
-                    "Add to Cart";
-
-            }, 1500);
-
-        }
-
-    }
-
-});
 
 /* =========================================================
    DATASHEET MODAL VIEWER
@@ -931,5 +878,374 @@ searchInput.addEventListener("keyup", function() {
     renderProducts(filteredProducts);
 
     updateProductCount(filteredProducts.length);
+
+});
+/* =========================================
+   SHOPPING CART SYSTEM
+========================================= */
+
+let cart = [];
+
+/* =========================================
+   ELEMENTS
+========================================= */
+
+const openCart =
+    document.getElementById("openCart");
+
+const closeCart =
+    document.getElementById("closeCart");
+
+const cartDrawer =
+    document.getElementById("cartDrawer");
+
+const cartOverlay =
+    document.getElementById("cartOverlay");
+
+const cartItems =
+    document.getElementById("cartItems");
+
+const cartCounter =
+    document.getElementById("cartCounter");
+
+/* =========================================
+   OPEN CART
+========================================= */
+
+openCart.addEventListener("click", () => {
+
+    cartDrawer.classList.add("active");
+
+    cartOverlay.classList.add("active");
+
+});
+
+/* =========================================
+   CLOSE CART
+========================================= */
+
+function closeCartDrawer(){
+
+    cartDrawer.classList.remove("active");
+
+    cartOverlay.classList.remove("active");
+
+}
+
+closeCart.addEventListener(
+    "click",
+    closeCartDrawer
+);
+
+cartOverlay.addEventListener(
+    "click",
+    closeCartDrawer
+);
+
+/* =========================================
+   UPDATE COUNTER
+========================================= */
+
+function updateCartCounter(){
+
+    let totalQty = 0;
+
+    cart.forEach(item => {
+
+        totalQty += item.quantity;
+
+    });
+
+    cartCounter.innerText =
+        totalQty;
+
+}
+
+/* =========================================
+   UPDATE CART UI
+========================================= */
+
+function updateCartUI(){
+
+    cartItems.innerHTML = "";
+
+    let subtotal = 0;
+
+    cart.forEach((item, index) => {
+
+        const numericPrice =
+            parseInt(
+                item.price.replace(/[₹,]/g, "")
+            );
+
+        subtotal +=
+            numericPrice * item.quantity;
+
+        const div =
+            document.createElement("div");
+
+        div.classList.add("cart-item");
+
+        div.innerHTML = `
+
+            <img
+                src="${
+                    item.image ||
+                    'https://via.placeholder.com/100'
+                }"
+            >
+
+            <div class="cart-details">
+
+                <h4>${item.title}</h4>
+
+                <div class="cart-price">
+
+                    ${item.price}
+
+                </div>
+
+                <div class="quantity-controls">
+
+                    <button
+                        class="decrease"
+                        data-index="${index}"
+                    >
+                        -
+                    </button>
+
+                    <span>
+                        ${item.quantity}
+                    </span>
+
+                    <button
+                        class="increase"
+                        data-index="${index}"
+                    >
+                        +
+                    </button>
+
+                </div>
+
+                <button
+                    class="remove-item"
+                    data-index="${index}"
+                >
+                    Remove
+                </button>
+
+            </div>
+
+        `;
+
+        cartItems.appendChild(div);
+
+    });
+
+    const shipping = 250;
+
+    const tax =
+        subtotal * 0.18;
+
+    const total =
+        subtotal + shipping + tax;
+
+    document.getElementById("subtotal")
+        .innerText =
+        `₹${subtotal.toLocaleString()}`;
+
+    document.getElementById("tax")
+        .innerText =
+        `₹${tax.toFixed(0)}`;
+
+    document.getElementById("total")
+        .innerText =
+        `₹${total.toFixed(0)}`;
+
+}
+
+/* =========================================
+   ADD TO CART
+========================================= */
+
+document.addEventListener("click", function(e){
+
+    if(
+        e.target.classList.contains(
+            "add-cart-btn"
+        )
+    ){
+
+        const sku =
+            e.target.dataset.sku;
+
+        const existing =
+            cart.find(
+                item => item.sku === sku
+            );
+
+        if(existing){
+
+            existing.quantity++;
+
+        }else{
+
+            const product =
+                productDatabase.find(
+                    item => item.sku === sku
+                );
+
+            cart.push({
+
+                ...product,
+
+                quantity:1
+
+            });
+
+        }
+
+        updateCartCounter();
+
+        updateCartUI();
+
+    }
+
+});
+
+/* =========================================
+   QUANTITY CONTROLS
+========================================= */
+
+document.addEventListener("click", function(e){
+
+    if(e.target.classList.contains("increase")){
+
+        const index =
+            e.target.dataset.index;
+
+        cart[index].quantity++;
+
+        updateCartUI();
+
+        updateCartCounter();
+
+    }
+
+    if(e.target.classList.contains("decrease")){
+
+        const index =
+            e.target.dataset.index;
+
+        if(cart[index].quantity > 1){
+
+            cart[index].quantity--;
+
+        }
+
+        updateCartUI();
+
+        updateCartCounter();
+
+    }
+
+    if(e.target.classList.contains("remove-item")){
+
+        const index =
+            e.target.dataset.index;
+
+        cart.splice(index,1);
+
+        updateCartUI();
+
+        updateCartCounter();
+
+    }
+
+});
+
+/* =========================================
+   CHECKOUT FLOW
+========================================= */
+
+const checkoutBtn =
+    document.getElementById("checkoutBtn");
+
+const checkoutScreen =
+    document.getElementById("checkoutScreen");
+
+checkoutBtn.addEventListener("click", () => {
+
+    if(cart.length === 0){
+
+        alert("Your cart is empty!");
+
+        return;
+
+    }
+
+    checkoutBtn.innerText =
+        "Loading Checkout...";
+
+    /* MOCK API CALL */
+
+    setTimeout(() => {
+
+        /* CLOSE CART DRAWER */
+
+        cartDrawer.classList.remove("active");
+
+        cartOverlay.classList.remove("active");
+
+        /* OPEN SHIPPING PAGE */
+
+        checkoutScreen.style.display =
+            "flex";
+
+        checkoutBtn.innerText =
+            "Proceed to Checkout";
+
+    }, 1500);
+
+});
+/* =========================================
+   BACK TO CART
+========================================= */
+
+const backToCart =
+    document.getElementById("backToCart");
+
+backToCart.addEventListener("click", () => {
+
+    checkoutScreen.style.display =
+        "none";
+
+    cartDrawer.classList.add("active");
+
+    cartOverlay.classList.add("active");
+
+});
+
+/* =========================================
+   MOCK API ORDER SUBMIT
+========================================= */
+
+document.getElementById("checkoutForm")
+.addEventListener("submit", function(e){
+
+    e.preventDefault();
+
+    alert(
+        "Order Successfully Placed!"
+    );
+
+    cart = [];
+
+    updateCartUI();
+
+    updateCartCounter();
+
+    checkoutScreen.style.display =
+        "none";
 
 });
