@@ -138,14 +138,8 @@ body{
 
 }
 /* =========================================
-   HAMBURGER MENU ICON
+   HAMBURGER MENU BUTTON
 ========================================= */
-
-.menu-icon-wrapper{
-
-    position:relative;
-
-}
 
 .menu-icon-btn{
 
@@ -177,13 +171,15 @@ body{
 
 .menu-icon-btn span{
 
+    display:block;
+
     width:28px;
 
     height:3px;
 
-    background:white;
+    background:#ffffff;
 
-    border-radius:5px;
+    border-radius:10px;
 
     transition:0.3s;
 
@@ -196,16 +192,6 @@ body{
 .menu-icon-btn:hover span{
 
     background:#d90429;
-
-}
-
-/* =========================================
-   SHOW MEGA MENU
-========================================= */
-
-.menu-icon-wrapper:hover .mega-menu{
-
-    display:grid;
 
 }
 /* =========================================
