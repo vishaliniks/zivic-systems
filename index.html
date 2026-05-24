@@ -77,9 +77,16 @@
                     Login
                 </button>
 
-                <button>
-                    Cart (0)
-                </button>
+                <button
+    class="cart-btn"
+    id="openCart"
+>
+
+    🛒 Cart (
+    <span id="cartCounter">0</span>
+    )
+
+</button>
 
             </div>
 
@@ -107,111 +114,182 @@
     </a>
 
 </div>
-        <nav class="navbar">
+        <!-- =========================================
+     MAIN NAVIGATION
+========================================= -->
 
-            <div class="nav-container">
-              <div class="nav-item">
+<nav class="mega-navbar">
 
-    Company
+    <div class="nav-item">
 
-    <div class="mega-menu company-dropdown">
+        <a href="#company">
+            Company
+        </a>
 
-        <div class="mega-column">
+        <div class="mega-menu">
 
-            <h4>Corporate</h4>
+            <div class="mega-column">
 
-            <a href="#companyProfile">
-                Corporate Profile
-            </a>
+                <h4>Corporate</h4>
 
-            <a href="#leadership">
-                Leadership
-            </a>
+                <a href="#history">Corporate Profile</a>
+                <a href="#leadership">Leadership</a>
+                <a href="#awards">Awards</a>
+                <a href="#quality">Quality Standards</a>
 
-            <a href="#awards">
-                Awards
-            </a>
+            </div>
 
-            <a href="#quality">
-                Quality Standards
-            </a>
+            <div class="mega-column">
+
+                <h4>Support</h4>
+
+                <a href="#">Technical Support</a>
+                <a href="#">Order Tracking</a>
+                <a href="#">Compliance</a>
+
+            </div>
 
         </div>
 
     </div>
 
-</div>
-                <div class="nav-item">
+    <div class="nav-item">
 
-                    Semiconductors
+        <a href="#products">
+            Semiconductors
+        </a>
 
-                    <!-- MEGA MENU -->
+        <div class="mega-menu">
 
-                    <div class="mega-menu">
+            <div class="mega-column">
 
-                        <div class="mega-column">
+                <h4>IGBT Modules</h4>
 
-                            <h4>IGBT Modules</h4>
-
-                            <a href="#">SKM Series</a>
-                            <a href="#">SEMITRANS</a>
-                            <a href="#">Power Modules</a>
-
-                        </div>
-
-                        <div class="mega-column">
-
-                            <h4>MOSFET</h4>
-
-                            <a href="#">High Voltage</a>
-                            <a href="#">Low RDS</a>
-                            <a href="#">Automotive</a>
-
-                        </div>
-
-                        <div class="mega-column">
-
-                            <h4>Microcontrollers</h4>
-
-                            <a href="#">STM32</a>
-                            <a href="#">ESP32</a>
-                            <a href="#">PIC</a>
-
-                        </div>
-
-                        <div class="mega-column">
-
-                            <h4>Sensors</h4>
-
-                            <a href="#">Voltage</a>
-                            <a href="#">Current</a>
-                            <a href="#">Temperature</a>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-                <div class="nav-item">
-                    Power Electronics
-                </div>
-
-                <div class="nav-item">
-                    Embedded Systems
-                </div>
-
-                <div class="nav-item">
-                    Automation
-                </div>
-
-                <div class="nav-item">
-                    Datasheets
-                </div>
+                <a href="#">SKM Series</a>
+                <a href="#">SEMITRANS</a>
+                <a href="#">Industrial Inverters</a>
 
             </div>
 
-        </nav>
+            <div class="mega-column">
+
+                <h4>Power Devices</h4>
+
+                <a href="#">Rectifiers</a>
+                <a href="#">Diodes</a>
+                <a href="#">Thyristors</a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="nav-item">
+
+        <a href="#products">
+            Power Electronics
+        </a>
+
+        <div class="mega-menu">
+
+            <div class="mega-column">
+
+                <h4>Power Modules</h4>
+
+                <a href="#">IGBT Modules</a>
+                <a href="#">Drivers</a>
+                <a href="#">SMPS</a>
+
+            </div>
+
+            <div class="mega-column">
+
+                <h4>Industrial Systems</h4>
+
+                <a href="#">Motor Drives</a>
+                <a href="#">Automation</a>
+                <a href="#">Control Panels</a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="nav-item">
+
+        <a href="#products">
+            Embedded Systems
+        </a>
+
+        <div class="mega-menu">
+
+            <div class="mega-column">
+
+                <h4>Development Boards</h4>
+
+                <a href="#">STM32</a>
+                <a href="#">ESP32</a>
+                <a href="#">Arduino</a>
+
+            </div>
+
+            <div class="mega-column">
+
+                <h4>IoT Modules</h4>
+
+                <a href="#">WiFi</a>
+                <a href="#">Bluetooth</a>
+                <a href="#">Sensors</a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="nav-item">
+
+        <a href="#automation">
+            Automation
+        </a>
+
+        <div class="mega-menu">
+
+            <div class="mega-column">
+
+                <h4>Industrial Automation</h4>
+
+                <a href="#">PLCs</a>
+                <a href="#">Relays</a>
+                <a href="#">Contactors</a>
+
+            </div>
+
+            <div class="mega-column">
+
+                <h4>Electrical Protection</h4>
+
+                <a href="#">MCBs</a>
+                <a href="#">Fuses</a>
+                <a href="#">Protection Devices</a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="nav-item">
+
+        <a href="#datasheets">
+            Datasheets
+        </a>
+
+    </div>
+
+</nav>
     
     </header>
 
@@ -893,6 +971,127 @@
 </footer>
 
     <script src="script.js"></script>
+<!-- =========================================
+     SHOPPING CART DRAWER
+========================================= -->
 
+<div class="cart-overlay" id="cartOverlay"></div>
+
+<div class="cart-drawer" id="cartDrawer">
+
+    <div class="cart-header">
+
+        <h2>Shopping Cart</h2>
+
+        <button id="closeCart">
+            ✕
+        </button>
+
+    </div>
+
+    <div class="cart-items" id="cartItems">
+
+        <!-- DYNAMIC ITEMS -->
+
+    </div>
+
+    <div class="cart-summary">
+
+        <div class="summary-row">
+
+            <span>Subtotal</span>
+
+            <span id="subtotal">
+                ₹0
+            </span>
+
+        </div>
+
+        <div class="summary-row">
+
+            <span>Shipping</span>
+
+            <span id="shipping">
+                ₹250
+            </span>
+
+        </div>
+
+        <div class="summary-row">
+
+            <span>Tax (18%)</span>
+
+            <span id="tax">
+                ₹0
+            </span>
+
+        </div>
+
+        <div class="summary-total">
+
+            <span>Total</span>
+
+            <span id="total">
+                ₹0
+            </span>
+
+        </div>
+
+        <button id="checkoutBtn">
+
+            Proceed to Checkout
+
+        </button>
+
+    </div>
+
+</div>
+
+<!-- =========================================
+     CHECKOUT PAGE
+========================================= -->
+
+<div class="checkout-screen" id="checkoutScreen">
+
+    <div class="checkout-container">
+
+        <h2>Shipping Details</h2>
+
+        <form id="checkoutForm">
+
+            <input
+                type="text"
+                placeholder="Full Name"
+                required
+            >
+
+            <input
+                type="email"
+                placeholder="Email Address"
+                required
+            >
+
+            <input
+                type="text"
+                placeholder="Phone Number"
+                required
+            >
+
+            <textarea
+                placeholder="Shipping Address"
+                required
+            ></textarea>
+
+            <button type="submit">
+
+                Place Order
+
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
 </body>
 </html>
