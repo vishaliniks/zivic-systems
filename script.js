@@ -420,8 +420,6 @@ const productDatabase = [
 },
 
 {
-
-{
     sku: "SKM100GB163D",
 
     title: "Semikron GB Industrial Module",
@@ -467,7 +465,7 @@ const productDatabase = [
 
     }
 
-}
+},
 
 {
     sku: "SKM195GAL124DN",
