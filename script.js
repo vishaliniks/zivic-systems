@@ -62,11 +62,11 @@ const productDatabase = [
 
     category: "IGBT Modules",
 
-    image: "SKM145GB12T4.png",
+    image: "SKM100GB12T4.png",
 
     price: "",
 
-    datasheetURL: "SKM145GB12T4.pdf",
+    datasheetURL: "SKM100GB12T4.pdf",
 
     specifications: {
 
@@ -160,7 +160,7 @@ const productDatabase = [
 
     category: "IGBT Modules",
 
-    image: "",
+    image: "SKM50GA123D.png",
 
     price: "",
 
@@ -186,7 +186,7 @@ const productDatabase = [
 
     category: "IGBT Modules",
 
-    image: "",
+    image: "SKM100GA123D.png",
 
     price: "",
 
@@ -210,7 +210,7 @@ const productDatabase = [
 
     category: "IGBT Modules",
 
-    image: "",
+    image: "SKM150GA123D.png",
 
     price: "",
 
@@ -234,7 +234,7 @@ const productDatabase = [
 
     category: "IGBT Modules",
 
-    image: "",
+    image: "SKM200GA123D.png",
 
     price: "",
 
@@ -258,7 +258,7 @@ const productDatabase = [
 
     category: "IGBT Modules",
 
-    image: "",
+    image: "SKM300GA123D.png",
 
     price: "",
 
