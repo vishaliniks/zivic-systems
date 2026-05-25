@@ -199,29 +199,7 @@ const productDatabase = [
 
 },
 
-{
-    sku: "SKM75GB12T4",
 
-    title: "Compact IGBT Power Module",
-
-    category: "IGBT Modules",
-
-    image: "SKM75GB12T4.png",
-
-    price: "",
-
-    datasheetURL: "SKM75GB12T4.pdf",
-
-    specifications: {
-
-        voltage: "1200V",
-        current: "75A",
-        package: "SEMITRANS",
-        application: "Power Supplies"
-
-    }
-
-},
 
 {
     sku: "SKM195GAL124DN",
@@ -271,32 +249,7 @@ const productDatabase = [
 
 },
 
-    {
-        sku: "SKM75GAL123D",
-
-        title: "Semitrans Industrial IGBT Module",
-
-        category: "Semiconductors",
-
-        image:
-            "SKM75GAL123D.png",
-
-        price: "₹9,650",
-
-        datasheetURL:
-            "SKM75GAL123D.pdf",
-
-        specifications: {
-
-            voltage: "1200V",
-            current: "75A",
-            package: "SEMITRANS",
-            application: "Power Control"
-
-        }
-
-    },
-
+    
     {
         sku: "STM32F446RE",
 
@@ -1685,17 +1638,13 @@ function updateCartUI(){
 
     cartItems.innerHTML = "";
 
-    let subtotal = 0;
+   
 
     cart.forEach((item, index) => {
 
-        const numericPrice =
-            parseInt(
-                item.price.replace(/[₹,]/g, "")
-            );
+        
 
-        subtotal +=
-            numericPrice * item.quantity;
+        
 
         const div =
             document.createElement("div");
@@ -1715,11 +1664,7 @@ function updateCartUI(){
 
                 <h4>${item.title}</h4>
 
-                <div class="cart-price">
-
-                    ${item.price}
-
-                </div>
+                
 
                 <div class="quantity-controls">
 
@@ -1758,25 +1703,7 @@ function updateCartUI(){
 
     });
 
-    const shipping = 250;
-
-    const tax =
-        subtotal * 0.18;
-
-    const total =
-        subtotal + shipping + tax;
-
-    document.getElementById("subtotal")
-        .innerText =
-        `₹${subtotal.toLocaleString()}`;
-
-    document.getElementById("tax")
-        .innerText =
-        `₹${tax.toFixed(0)}`;
-
-    document.getElementById("total")
-        .innerText =
-        `₹${total.toFixed(0)}`;
+    
 
 }
 
@@ -1901,7 +1828,7 @@ checkoutBtn.addEventListener("click", () => {
     }
 
     checkoutBtn.innerText =
-        "Loading Checkout...";
+        "Loading ...";
 
     /* MOCK API CALL */
 
@@ -1919,7 +1846,7 @@ checkoutBtn.addEventListener("click", () => {
             "flex";
 
         checkoutBtn.innerText =
-            "Proceed to Checkout";
+            "Get quote";
 
     }, 1500);
 
@@ -1952,7 +1879,7 @@ document.getElementById("checkoutForm")
     e.preventDefault();
 
     alert(
-        "Order Successfully Placed!"
+        "Quotation Request Submitted Successfully!"
     );
 
     cart = [];
