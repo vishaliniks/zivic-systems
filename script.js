@@ -127,53 +127,7 @@ const productDatabase = [
 
 },
 
-{
-    sku: "SKM300GB123D",
 
-    title: "Semikron Industrial IGBT Module",
-
-    category: "IGBT Modules",
-
-    image: "SKM300GB123D.png",
-
-    price: "",
-
-    datasheetURL: "SKM300GB123D.pdf",
-
-    specifications: {
-
-        voltage: "1200V",
-        current: "300A",
-        package: "SEMITRANS",
-        application: "Industrial Drives"
-
-    }
-
-},
-
-{
-    sku: "SKM400GB124D",
-
-    title: "Heavy Duty IGBT Module",
-
-    category: "IGBT Modules",
-
-    image: "SKM400GB124D.png",
-
-    price: "",
-
-    datasheetURL: "SKM400GB124D.pdf",
-
-    specifications: {
-
-        voltage: "1200V",
-        current: "400A",
-        package: "SEMITRANS",
-        application: "Welding Machines"
-
-    }
-
-},
 
 {
     sku: "SKM600GB128D",
