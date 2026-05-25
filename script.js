@@ -153,7 +153,321 @@ const productDatabase = [
 
 },
 
+{
+    sku: "SKM50GA123D",
 
+    title: "Semikron IGBT Module 50A",
+
+    category: "IGBT Modules",
+
+    image: "",
+
+    price: "",
+
+    datasheetURL: "SKM50GA123D.PDF",
+
+    specifications: {
+
+        voltage: "1200V",
+        current: "50A",
+        package: "SEMITRANS",
+        application: "Industrial Control"
+
+    }
+
+},
+
+
+
+{
+    sku: "SKM100GA123D",
+
+    title: "Semikron IGBT Module 100A",
+
+    category: "IGBT Modules",
+
+    image: "",
+
+    price: "",
+
+    datasheetURL: "SKM50GA123D.PDF",
+
+    specifications: {
+
+        voltage: "1200V",
+        current: "100A",
+        package: "SEMITRANS",
+        application: "Motor Drives"
+
+    }
+
+},
+
+{
+    sku: "SKM150GA123D",
+
+    title: "Semikron IGBT Module 150A",
+
+    category: "IGBT Modules",
+
+    image: "",
+
+    price: "",
+
+    datasheetURL: "SKM50GA123D.PDF",
+
+    specifications: {
+
+        voltage: "1200V",
+        current: "150A",
+        package: "SEMITRANS",
+        application: "Industrial Inverter"
+
+    }
+
+},
+
+{
+    sku: "SKM200GA123D",
+
+    title: "Semikron IGBT Module 200A",
+
+    category: "IGBT Modules",
+
+    image: "",
+
+    price: "",
+
+    datasheetURL: "SKM50GA123D.PDF",
+
+    specifications: {
+
+        voltage: "1200V",
+        current: "200A",
+        package: "SEMITRANS",
+        application: "Automation"
+
+    }
+
+},
+
+{
+    sku: "SKM300GA123D",
+
+    title: "Semikron IGBT Module 300A",
+
+    category: "IGBT Modules",
+
+    image: "",
+
+    price: "",
+
+    datasheetURL: "SKM50GA123D.PDF",
+
+    specifications: {
+
+        voltage: "1200V",
+        current: "300A",
+        package: "SEMITRANS",
+        application: "Industrial Drives"
+
+    }
+
+},
+
+{
+    sku: "SKM400GA123D",
+
+    title: "Semikron IGBT Module 400A",
+
+    category: "IGBT Modules",
+
+    image: "",
+
+    price: "",
+
+    datasheetURL: "SKM50GA123D.PDF",
+
+    specifications: {
+
+        voltage: "1200V",
+        current: "400A",
+        package: "SEMITRANS",
+        application: "Power Conversion"
+
+    }
+
+},
+
+{
+    sku: "SKM500GA123DS",
+
+    title: "Semikron IGBT Module 500A",
+
+    category: "IGBT Modules",
+
+    image: "",
+
+    price: "",
+
+    datasheetURL: "SKM50GA123D.PDF",
+
+    specifications: {
+
+        voltage: "1200V",
+        current: "500A",
+        package: "SEMITRANS",
+        application: "Heavy Industrial"
+
+    }
+
+},
+
+{
+    sku: "SKM100GAL163D",
+
+    title: "Semikron GAL IGBT Module",
+
+    category: "IGBT Modules",
+
+    image: "",
+
+    price: "",
+
+    datasheetURL: "SKM50GA123D.PDF",
+
+    specifications: {
+
+        voltage: "1600V",
+        current: "100A",
+        package: "SEMITRANS",
+        application: "Industrial UPS"
+
+    }
+
+},
+
+{
+    sku: "SKM150GAL163D",
+
+    title: "Semikron GAL Series Module",
+
+    category: "IGBT Modules",
+
+    image: "",
+
+    price: "",
+
+    datasheetURL: "SKM50GA123D.PDF",
+
+    specifications: {
+
+        voltage: "1600V",
+        current: "150A",
+        package: "SEMITRANS",
+        application: "Servo Systems"
+
+    }
+
+},
+
+{
+    sku: "SKM200GAL163D",
+
+    title: "Semikron Industrial GAL Module",
+
+    category: "IGBT Modules",
+
+    image: "",
+
+    price: "",
+
+    datasheetURL: "SKM50GA123D.PDF",
+
+    specifications: {
+
+        voltage: "1600V",
+        current: "200A",
+        package: "SEMITRANS",
+        application: "Power Electronics"
+
+    }
+
+},
+
+{
+    sku: "SKM50GB123D",
+
+    title: "Semikron GB IGBT Module",
+
+    category: "IGBT Modules",
+
+    image: "",
+
+    price: "",
+
+    datasheetURL: "SKM50GA123D.PDF",
+
+    specifications: {
+
+        voltage: "1700V",
+        current: "50A",
+        package: "SEMITRANS",
+        application: "Industrial Automation"
+
+    }
+
+},
+
+{
+
+{
+    sku: "SKM100GB163D",
+
+    title: "Semikron GB Industrial Module",
+
+    category: "IGBT Modules",
+
+    image: "",
+
+    price: "",
+
+    datasheetURL: "SKM50GA123D.PDF",
+
+    specifications: {
+
+        voltage: "1700V",
+        current: "100A",
+        package: "SEMITRANS",
+        application: "Motor Drives"
+
+    }
+
+},
+
+{
+    sku: "SKM150GB163D",
+
+    title: "Semikron Heavy Duty IGBT Module",
+
+    category: "IGBT Modules",
+
+    image: "",
+
+    price: "",
+
+    datasheetURL: "SKM50GA123D.PDF",
+
+    specifications: {
+
+        voltage: "1700V",
+        current: "150A",
+        package: "SEMITRANS",
+        application: "Industrial Control"
+
+    }
+
+}
 
 {
     sku: "SKM195GAL124DN",
