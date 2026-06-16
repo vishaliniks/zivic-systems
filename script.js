@@ -1968,7 +1968,42 @@ searchInput.addEventListener("keyup", function() {
     renderProducts(filteredProducts);
 
 });
+document.querySelectorAll(".filter").forEach(filter => {
 
+    filter.addEventListener("change", applyFilters);
+
+});
+
+function applyFilters() {
+
+    const activeFilters = [...document.querySelectorAll(".filter:checked")]
+        .map(f => f.value.toLowerCase());
+
+    if (activeFilters.length === 0) {
+
+        renderProducts(productDatabase);
+        updateProductCount(productDatabase.length);
+        return;
+    }
+
+    const filtered = productDatabase.filter(product => {
+
+        const searchableText = (
+            product.sku + " " +
+            product.title + " " +
+            JSON.stringify(product.specifications)
+        ).toLowerCase();
+
+        return activeFilters.some(filter =>
+            searchableText.includes(filter)
+        );
+
+    });
+
+    renderProducts(filtered);
+    updateProductCount(filtered.length);
+
+}
 /* =========================================================
    DYNAMIC PRODUCT COUNTER
 ========================================================= */
