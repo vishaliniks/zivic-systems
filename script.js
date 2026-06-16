@@ -1785,6 +1785,91 @@ closeLeaderModal.addEventListener("click", () => {
     leaderModal.style.display = "none";
 
 });
+const filterCheckboxes =
+document.querySelectorAll(".filter-category");
+
+filterCheckboxes.forEach(box => {
+
+    box.addEventListener("change", filterProducts);
+
+});
+
+function filterProducts() {
+
+    const selected =
+    [...filterCheckboxes]
+    .filter(cb => cb.checked)
+    .map(cb => cb.value);
+
+    if(selected.length === 0){
+
+        renderProducts(productDatabase);
+        updateProductCount(productDatabase.length);
+        return;
+
+    }
+
+    const filtered =
+    productDatabase.filter(product =>
+        selected.includes(product.category)
+    );
+
+    renderProducts(filtered);
+    updateProductCount(filtered.length);
+}
+let currentPage = 1;
+const itemsPerPage = 12;
+
+function renderProducts(products){
+
+    productsContainer.innerHTML = "";
+
+    const start =
+    (currentPage - 1) * itemsPerPage;
+
+    const end =
+    start + itemsPerPage;
+
+    const paginated =
+    products.slice(start,end);
+
+    paginated.forEach(product => {
+
+        // existing card code
+
+    });
+
+    renderPagination(products);
+
+}
+function renderPagination(products){
+
+    const totalPages =
+    Math.ceil(products.length / itemsPerPage);
+
+    const pagination =
+    document.getElementById("pagination");
+
+    pagination.innerHTML = "";
+
+    for(let i=1;i<=totalPages;i++){
+
+        pagination.innerHTML +=
+        `<button onclick="goToPage(${i})">
+            ${i}
+        </button>`;
+
+    }
+
+}
+
+function goToPage(page){
+
+    currentPage = page;
+
+    renderProducts(productDatabase);
+
+}
 /* =========================================================
    PRODUCT RENDERING
 ========================================================= */
@@ -1809,7 +1894,7 @@ function renderProducts(products) {
     src="${product.image || 'https://via.placeholder.com/300x200?text=No+Image'}"
     alt="${product.title}"
 />
-<img src="${product.image || 'no-image.png'}" alt="${product.title}">
+
 
             <div class="part-number">
                 ${product.sku}
