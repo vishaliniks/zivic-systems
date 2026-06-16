@@ -137,6 +137,7 @@ body{
     font-size:24px;
 
 }
+
 /* =========================================
    HAMBURGER MENU BUTTON
 ========================================= */
@@ -568,6 +569,11 @@ body{
 }
 
 /* PRODUCT GRID */
+#products{
+    max-height:80vh;
+    overflow-y:auto;
+    scroll-behavior:smooth;
+}
 
 .products.grid-view{
 
