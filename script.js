@@ -1785,91 +1785,23 @@ closeLeaderModal.addEventListener("click", () => {
     leaderModal.style.display = "none";
 
 });
-const filterCheckboxes =
-document.querySelectorAll(".filter-category");
+window.addEventListener("scroll", () => {
 
-filterCheckboxes.forEach(box => {
+    if (
+        window.innerHeight +
+        window.scrollY >=
+        document.body.offsetHeight - 300
+    ) {
 
-    box.addEventListener("change", filterProducts);
+        visibleProducts += 12;
+
+        renderProducts(currentProducts);
+
+    }
 
 });
 
-function filterProducts() {
 
-    const selected =
-    [...filterCheckboxes]
-    .filter(cb => cb.checked)
-    .map(cb => cb.value);
-
-    if(selected.length === 0){
-
-        renderProducts(productDatabase);
-        updateProductCount(productDatabase.length);
-        return;
-
-    }
-
-    const filtered =
-    productDatabase.filter(product =>
-        selected.includes(product.category)
-    );
-
-    renderProducts(filtered);
-    updateProductCount(filtered.length);
-}
-let currentPage = 1;
-const itemsPerPage = 12;
-
-function renderProducts(products){
-
-    productsContainer.innerHTML = "";
-
-    const start =
-    (currentPage - 1) * itemsPerPage;
-
-    const end =
-    start + itemsPerPage;
-
-    const paginated =
-    products.slice(start,end);
-
-    paginated.forEach(product => {
-
-        // existing card code
-
-    });
-
-    renderPagination(products);
-
-}
-function renderPagination(products){
-
-    const totalPages =
-    Math.ceil(products.length / itemsPerPage);
-
-    const pagination =
-    document.getElementById("pagination");
-
-    pagination.innerHTML = "";
-
-    for(let i=1;i<=totalPages;i++){
-
-        pagination.innerHTML +=
-        `<button onclick="goToPage(${i})">
-            ${i}
-        </button>`;
-
-    }
-
-}
-
-function goToPage(page){
-
-    currentPage = page;
-
-    renderProducts(productDatabase);
-
-}
 /* =========================================================
    PRODUCT RENDERING
 ========================================================= */
