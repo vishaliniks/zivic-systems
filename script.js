@@ -1563,6 +1563,178 @@ const productDatabase = [
 
     }
 
+},
+   {
+    sku: "KM51070292",
+    title: "Schneider Electric LP1K090015MD Contactor",
+    category: "Industrial Automation",
+    image: "",
+    datasheetURL: "",
+    specifications: {
+        manufacturer: "Schneider Electric",
+        model: "LP1K090015MD",
+        series: "Telemecanique",
+        application: "Motor Control"
+    }
+},
+
+{
+    sku: "KM51070293",
+    title: "Schneider Electric LP1K090085MD Contactor",
+    category: "Industrial Automation",
+    image: "",
+    datasheetURL: "",
+    specifications: {
+        manufacturer: "Schneider Electric",
+        model: "LP1K090085MD",
+        series: "Telemecanique",
+        application: "Industrial Control"
+    }
+},
+
+{
+    sku: "KM963043",
+    title: "Schneider Electric LA1KN22 Auxiliary Contact Block",
+    category: "Industrial Automation",
+    image: "",
+    datasheetURL: "",
+    specifications: {
+        manufacturer: "Schneider Electric",
+        model: "LA1KN22",
+        series: "Telemecanique",
+        application: "Contactor Accessories"
+    }
+},
+
+{
+    sku: "LC1D09M7",
+    title: "Schneider TeSys D Contactor 9A",
+    category: "Industrial Automation",
+    image: "",
+    datasheetURL: "",
+    specifications: {
+        current: "9A",
+        voltage: "690V",
+        series: "TeSys D",
+        application: "Motor Starter"
+    }
+},
+
+{
+    sku: "LC1D12M7",
+    title: "Schneider TeSys D Contactor 12A",
+    category: "Industrial Automation",
+    image: "",
+    datasheetURL: "",
+    specifications: {
+        current: "12A",
+        voltage: "690V",
+        series: "TeSys D",
+        application: "Motor Control"
+    }
+},
+
+{
+    sku: "LC1D18M7",
+    title: "Schneider TeSys D Contactor 18A",
+    category: "Industrial Automation",
+    image: "",
+    datasheetURL: "",
+    specifications: {
+        current: "18A",
+        voltage: "690V",
+        series: "TeSys D",
+        application: "Industrial Automation"
+    }
+},
+
+{
+    sku: "LRD21",
+    title: "Schneider Thermal Overload Relay",
+    category: "Protection Devices",
+    image: "",
+    datasheetURL: "",
+    specifications: {
+        currentRange: "12-18A",
+        series: "TeSys",
+        application: "Motor Protection"
+    }
+},
+
+{
+    sku: "GV2ME14",
+    title: "Schneider Motor Circuit Breaker",
+    category: "Protection Devices",
+    image: "",
+    datasheetURL: "",
+    specifications: {
+        currentRange: "6-10A",
+        poles: "3P",
+        application: "Motor Protection"
+    }
+},
+
+{
+    sku: "XB2BA31C",
+    title: "Schneider Push Button Green",
+    category: "Control Components",
+    image: "",
+    datasheetURL: "",
+    specifications: {
+        color: "Green",
+        type: "Momentary",
+        application: "Control Panel"
+    }
+},
+
+{
+    sku: "XB2BA42C",
+    title: "Schneider Push Button Red",
+    category: "Control Components",
+    image: "",
+    datasheetURL: "",
+    specifications: {
+        color: "Red",
+        type: "Momentary",
+        application: "Emergency Stop"
+    }
+},
+
+{
+    sku: "ZB2BE101",
+    title: "Schneider Contact Block NO",
+    category: "Control Components",
+    image: "",
+    datasheetURL: "",
+    specifications: {
+        contacts: "1NO",
+        application: "Push Button Assembly"
+    }
+},
+
+{
+    sku: "RM17TE00",
+    title: "Schneider Phase Monitoring Relay",
+    category: "Monitoring Devices",
+    image: "",
+    datasheetURL: "",
+    specifications: {
+        voltage: "208-480VAC",
+        application: "Phase Protection"
+    }
+},
+
+{
+    sku: "ATV12H075M2",
+    title: "Schneider Variable Frequency Drive",
+    category: "Drives",
+    image: "",
+    datasheetURL: "",
+    specifications: {
+        power: "0.75kW",
+        voltage: "230VAC",
+        application: "Motor Speed Control"
+    }
 }
 ];
 
@@ -1637,6 +1809,7 @@ function renderProducts(products) {
     src="${product.image || 'https://via.placeholder.com/300x200?text=No+Image'}"
     alt="${product.title}"
 />
+<img src="${product.image || 'no-image.png'}" alt="${product.title}">
 
             <div class="part-number">
                 ${product.sku}
